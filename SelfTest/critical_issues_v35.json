@@ -1,0 +1,32 @@
+{
+  "Issue 1 - Upstream Titer": {
+    "severity": "MEDIUM",
+    "finding": "Titer range 0.090 g/L with all params, 0.116 g/L without hydrophobicity",
+    "root_cause": "Sequence-dependent modulation adds only \u00b13-5% variation; hydrophobicity must be explicitly passed",
+    "recommendation": "Always pass hydrophobicity/GRAVY to upstream twin; consider widening modulation coefficients"
+  },
+  "Issue 2 - Immunogenicity": {
+    "severity": "MEDIUM",
+    "finding": "ADA score range 0.043 across 5 molecules",
+    "root_cause": "humanization_score=1.0 for all fully human mAbs zeros out 20% of the scoring weight",
+    "recommendation": "Add germline-distance scoring for CDR regions; different CDR3 sequences should yield different humanization scores"
+  },
+  "Issue 3 - Glycan Profile": {
+    "severity": "LOW",
+    "finding": "G0F range 54-57% across molecules",
+    "root_cause": "This is scientifically reasonable \u2014 canonical IgG1s in standard CHO should have similar glycan profiles",
+    "recommendation": "No change needed. Document as expected behavior."
+  },
+  "Issue 4 - GOV-5 cIEF Sum": {
+    "severity": "LOW",
+    "finding": "NISTmAb cIEF sums correctly (100.0%), but cief_sum field was missing from JSON",
+    "root_cause": "Data collection bug in v35 validation script \u2014 NISTmAb was stored differently",
+    "recommendation": "Fixed in updated JSON. Not a platform issue."
+  },
+  "Issue 5 - GOV-7 MW Mismatch": {
+    "severity": "MEDIUM",
+    "finding": "scFv report has MW mismatch between context and molecule_overview",
+    "root_cause": "report_assembler uses different MW calculation paths for non-IgG formats",
+    "recommendation": "Ensure single source of truth for MW in report_assembler"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "results": [
+    {
+      "name": "NISTmAb_RM8671",
+      "expected": "canonical_mab",
+      "is_ood": false,
+      "rule_class": "single_domain",
+      "rule_confidence": "Medium",
+      "trained_class": "canonical_mab",
+      "trained_confidence": "High",
+      "trained_probability": 1.0
+    },
+    {
+      "name": "TestBispecific_HC1LC1HC2LC2",
+      "expected": "bispecific",
+      "is_ood": false,
+      "rule_class": "bispecific",
+      "rule_confidence": "Low",
+      "trained_class": "canonical_mab",
+      "trained_confidence": "High",
+      "trained_probability": 0.981
+    },
+    {
+      "name": "TestFcFusion_Etanercept",
+      "expected": "fc_fusion",
+      "is_ood": false,
+      "rule_class": "single_domain",
+      "rule_confidence": "Medium",
+      "trained_class": "single_domain",
+      "trained_confidence": "High",
+      "trained_probability": 0.992
+    },
+    {
+      "name": "TestNanobody_VHH",
+      "expected": "single_domain",
+      "is_ood": false,
+      "rule_class": "single_domain",
+      "rule_confidence": "High",
+      "trained_class": "single_domain",
+      "trained_confidence": "High",
+      "trained_probability": 0.978
+    },
+    {
+      "name": "TestPeptide_GLP1",
+      "expected": "peptide",
+      "is_ood": false,
+      "rule_class": "peptide",
+      "rule_confidence": "High",
+      "trained_class": "peptide",
+      "trained_confidence": "High",
+      "trained_probability": 0.996
+    },
+    {
+      "name": "OOD_AllAlanine",
+      "expected": "unknown",
+      "is_ood": true,
+      "rule_class": "unknown",
+      "rule_confidence": "Low",
+      "trained_class": "engineered_scaffold",
+      "trained_confidence": "High",
+      "trained_probability": 1.0
+    },
+    {
+      "name": "OOD_ExtremeBasic",
+      "expected": "unknown",
+      "is_ood": true,
+      "rule_class": "unknown",
+      "rule_confidence": "Low",
+      "trained_class": "engineered_scaffold",
+      "trained_confidence": "High",
+      "trained_probability": 0.967
+    }
+  ],
+  "rule_acc": 0.6,
+  "trained_acc": 0.6,
+  "changes": [
+    {
+      "name": "NISTmAb_RM8671",
+      "from": "single_domain",
+      "to": "canonical_mab",
+      "expected": "canonical_mab"
+    },
+    {
+      "name": "TestBispecific_HC1LC1HC2LC2",
+      "from": "bispecific",
+      "to": "canonical_mab",
+      "expected": "bispecific"
+    },
+    {
+      "name": "OOD_AllAlanine",
+      "from": "unknown",
+      "to": "engineered_scaffold",
+      "expected": "unknown"
+    },
+    {
+      "name": "OOD_ExtremeBasic",
+      "from": "unknown",
+      "to": "engineered_scaffold",
+      "expected": "unknown"
+    }
+  ],
+  "timestamp": "2026-03-20T22:41:27"
+}

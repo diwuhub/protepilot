@@ -1,0 +1,49 @@
+{
+  "passed": 5,
+  "total": 6,
+  "grade": "Good",
+  "metrics": [
+    {
+      "name": "Isoelectric Point (pI)",
+      "pred": "N/A",
+      "ref": "9.15",
+      "pass": false,
+      "source": "biopython"
+    },
+    {
+      "name": "Sequence Length",
+      "pred": "661",
+      "ref": "665",
+      "pass": true,
+      "source": "biopython"
+    },
+    {
+      "name": "Deamidation Hotspots",
+      "pred": "10 sites detected",
+      "ref": "3 confirmed (HC-N388, HC-N393, LC-N30)",
+      "pass": true,
+      "source": "regex_scan"
+    },
+    {
+      "name": "Oxidation Hotspots (Met)",
+      "pred": "7 Met residues",
+      "ref": "2 confirmed (HC-M255, HC-M431)",
+      "pass": true,
+      "source": "regex_scan"
+    },
+    {
+      "name": "Aggregation Risk",
+      "pred": "0.300",
+      "ref": "Low (0.4% HMW by SEC)",
+      "pass": true,
+      "source": "heuristic"
+    },
+    {
+      "name": "ADA Risk Level",
+      "pred": "Medium",
+      "ref": "Low-Medium (humanized IgG1\u03ba)",
+      "pass": true,
+      "source": "immunogenicity_twin"
+    }
+  ]
+}

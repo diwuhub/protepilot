@@ -1,0 +1,131 @@
+# ═══════════════════════════════════════════════════════════════
+# ProtePilot Platform Constants Reference
+# ═══════════════════════════════════════════════════════════════
+#
+# PURPOSE: Audit-trail document listing ALL business-logic constants
+# across the platform. This file is NOT loaded by code — it is a
+# human-readable inventory for review, tuning decisions, and
+# compliance documentation.
+#
+# DESIGN DECISION: Constants are managed in Python modules (not YAML)
+# for type safety, IDE autocomplete, and zero-parsing overhead.
+# Cross-module constants live in src/platform_config.py.
+# Module-specific constants remain in their respective modules.
+#
+# Last audited: 2026-03-20
+# ═══════════════════════════════════════════════════════════════
+
+# ─────────────────────────────────────────────────────────────
+# CROSS-MODULE CONSTANTS (src/platform_config.py)
+# These are referenced by 2+ modules and must stay synchronized.
+# ─────────────────────────────────────────────────────────────
+
+grade_boundaries:
+  GRADE_LOW_UPPER: 0.25          # score < 0.25 → "Low Risk"
+  GRADE_MEDIUM_UPPER: 0.55       # 0.25 ≤ score < 0.55 → "Medium Risk"
+  source: src/report_schema.py   # SINGLE SOURCE OF TRUTH
+  consumers:
+    - src/developability_core.py
+    - src/bulk_runner.py
+    - src/bulk_summary.py
+    - src/report_assembler.py
+
+confidence_thresholds:
+  HIGH: 0.80
+  MEDIUM: 0.50
+  source: src/platform_config.py
+  consumers:
+    - src/training/model_inference.py
+    - src/training/benchmark_evaluator.py
+
+model_validation_gates:
+  MIN_TEST_ACCURACY: 0.50
+  MAX_BENCHMARK_DRIFT: 4          # class changes allowed
+  MAX_ACCURACY_DEGRADATION: 0.05  # vs baseline
+  source: src/platform_config.py
+  consumers:
+    - src/training/benchmark_evaluator.py
+    - SelfTest/run_validation.py
+
+chain_detection:
+  MIN_SEQUENCE_LENGTH: 10         # aa, below this = invalid
+  MIN_HC_LENGTH: 200              # aa, for bispecific HC detection
+  MIN_CHAIN_LENGTH: 80            # aa, for unique chain counting
+  IDENTITY_THRESHOLD: 0.85        # bispecific HC1 vs HC2
+  source: src/platform_config.py
+  consumers:
+    - src/molecule_classifier.py
+    - src/bulk_schema.py
+    - src/training/data_harmonizer.py
+    - src/training/benchmark_evaluator.py
+
+cogs_grade_boundaries:
+  EXCELLENT: 50                   # $/g
+  GOOD: 100
+  MARGINAL: 150
+  source: src/cogs_twin.py (module-specific, documented here)
+  consumers:
+    - src/cogs_twin.py
+    - src/advisory_panel.py
+
+# ─────────────────────────────────────────────────────────────
+# MODULE-SPECIFIC CONSTANTS (remain in their modules)
+# Listed here for audit visibility only.
+# ─────────────────────────────────────────────────────────────
+
+upstream_bioreactor:
+  module: src/upstream_twin.py
+  note: "CHO fed-batch kinetics from Kelley 2009 / Wurm 2004. Literature-derived, not tunable."
+  key_params:
+    mu_max: 0.029          # 1/h
+    K_g: 0.5               # g/L (Monod)
+    X_max: 35.0            # ×10⁶/mL
+    q_p_max: 35.0          # pg/cell/day
+    t_end_days: 14.0
+
+analytical_characterization:
+  module: src/analytical_twin.py
+  note: "NIST reference masses and literature-derived PTM motifs. Stable constants."
+  key_params:
+    liability_motifs: 9     # regex patterns (NG, NS, NT, M, W, NxST, DP, DG, DS)
+    glycoform_profiles: 4   # standard_cho, high_mannose, afucosylated, highly_sialylated
+    density_high: 80        # per 1000 residues
+    density_medium: 50
+
+stability_twin:
+  module: src/stability_twin.py
+  note: "Arrhenius-based shelf-life projection. pH/pI distance penalties from ICH Q5C."
+  key_params:
+    ph_pi_distance_critical: 0.5    # pH units
+    deamidation_ph_ranges: [5.0, 6.0, 7.0, 8.0]
+    hmw_ceiling: 20.0               # %
+
+formulation_twin:
+  module: src/formulation_twin.py
+  note: "Buffer/excipient catalog from USP/EP pharmacopeia. pKa from CRC Handbook."
+  key_params:
+    buffers: [histidine, citrate, phosphate, acetate, tris]
+    excipients: [trehalose, sucrose, PS80, PS20, arginine, proline]
+
+risk_weight_profiles:
+  module: src/molecule_classifier.py
+  note: "9 molecule-class-specific weight vectors. Scientific judgment, not arbitrary."
+  classes: [canonical_mab, bispecific, fc_fusion, adc, single_domain, peptide, fusion_protein, engineered_scaffold, unknown]
+  dimensions: [aggregation, stability, viscosity, expression, immunogenicity, species_purity, conjugation]
+
+ood_baseline_statistics:
+  module: src/ood_baseline.py
+  note: "Per-class biophysical reference ranges. Should eventually be auto-computed from training data."
+  classes: 8
+  features: [gravy, cys_per_100, seq_length, pI, mw_kda]
+
+validation_planning:
+  module: src/validation_planner.py
+  note: "ICH Q6B-aligned assay trigger thresholds."
+  key_triggers:
+    sec_agg_risk: 0.20
+    dls_agg_risk: 0.40
+    dsf_stability: 0.75
+    dsc_stability: 0.60
+    ptm_site_count: 3
+    viscosity_risk: 0.30

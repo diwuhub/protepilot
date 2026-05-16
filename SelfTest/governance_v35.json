@@ -1,0 +1,50 @@
+{
+  "GOV-1": {
+    "status": "PASS",
+    "paths_tested": 18,
+    "total": 18
+  },
+  "GOV-2": {
+    "status": "PASS",
+    "all_high_confidence": true
+  },
+  "GOV-3": {
+    "status": "PASS"
+  },
+  "GOV-4": {
+    "status": "PASS",
+    "drift_issues": []
+  },
+  "GOV-5": {
+    "status": "FAIL",
+    "checks": {
+      "adalimumab_cief_sum": true,
+      "adalimumab_glycan_sum": true,
+      "bevacizumab_cief_sum": true,
+      "bevacizumab_glycan_sum": true,
+      "trastuzumab_cief_sum": true,
+      "trastuzumab_glycan_sum": true,
+      "NISTmAb_cief_sum": false,
+      "NISTmAb_glycan_sum": true,
+      "adalimumab_nu_ordering": true,
+      "bevacizumab_nu_ordering": true,
+      "trastuzumab_nu_ordering": true
+    }
+  },
+  "GOV-6": {
+    "status": "PASS",
+    "log_count": 3,
+    "today_count": 0
+  },
+  "GOV-7": {
+    "status": "WARN",
+    "findings": [
+      {
+        "check": "GOV-7a MW mismatch",
+        "severity": "MEDIUM",
+        "fix_layer": "report_assembler",
+        "detail": "context=54.094, overview=54.1"
+      }
+    ]
+  }
+}

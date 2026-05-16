@@ -1,0 +1,67 @@
+{
+  "detector_type": "ensemble_mahalanobis_iforest",
+  "feature_cols": [
+    "pI",
+    "gravy",
+    "hydrophobicity",
+    "aromatic_frac",
+    "pro_gly_frac",
+    "cys_frac",
+    "deam_density",
+    "ox_density",
+    "charge_ratio",
+    "small_frac",
+    "aliphatic_idx"
+  ],
+  "feature_schema_version": "012225e7f3282c4a",
+  "pipeline_version": "1.0.0",
+  "format_version": "2.0",
+  "dataset_version": "b55b88142131f803",
+  "sklearn_version": "1.8.0",
+  "mahalanobis_threshold": 7.762979691554279,
+  "iforest_threshold": -0.6027486886184523,
+  "per_class_thresholds": {
+    "adc": {
+      "threshold": 6.071951701366769,
+      "n_samples": 208
+    },
+    "bispecific": {
+      "threshold": 5.0138298911974655,
+      "n_samples": 320
+    },
+    "canonical_mab": {
+      "threshold": 5.0884410732174645,
+      "n_samples": 12591
+    },
+    "engineered_scaffold": {
+      "threshold": 3.2858709829794637,
+      "n_samples": 15
+    },
+    "fc_fusion": {
+      "threshold": 4.260673647118348,
+      "n_samples": 107
+    },
+    "fusion_protein": {
+      "threshold": 5.852854342193811,
+      "n_samples": 124
+    },
+    "peptide": {
+      "threshold": 5.86121676941256,
+      "n_samples": 10030
+    },
+    "single_domain": {
+      "threshold": 4.724471782921908,
+      "n_samples": 1684
+    }
+  },
+  "n_in_distribution": 25079,
+  "n_ood_training": 480,
+  "val_f1": 0.5635359116022098,
+  "test_f1": 0.6422287390029324,
+  "val_precision": 0.504950495049505,
+  "val_recall": 0.6375,
+  "test_precision": 0.6049723756906077,
+  "test_recall": 0.684375,
+  "has_iforest": true,
+  "timestamp": "2026-03-30T16:36:15"
+}

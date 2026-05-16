@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=67.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "protepilot"
+version = "1.1.0"
+description = "Enterprise biologics developability assessment platform"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.21",
+    "pandas>=1.3",
+    "biopython>=1.79",
+    "scipy>=1.7",
+]
+
+[project.optional-dependencies]
+ml = [
+    "xgboost>=1.7",
+    "scikit-learn>=1.2",
+    "torch>=2.0",
+    "transformers>=4.20",
+]
+ui = [
+    "streamlit>=1.20",
+    "plotly>=5.0",
+    "py3Dmol>=2.0",
+]
+dev = [
+    "pytest>=7.0",
+    "ruff>=0.1",
+]
+all = ["protepilot[ml,ui,dev]"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.pytest.ini_options]
+markers = [
+    "core: Layer 1 core tests (no ML, no UI)",
+    "bulk: Bulk analysis tests",
+    "ml: ML training tests (requires torch, xgboost)",
+    "governance: Data governance tests",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py39"

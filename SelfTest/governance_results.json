@@ -1,0 +1,325 @@
+{
+  "suite": "PharmaDev AI Governance Validation",
+  "run_at": "2026-03-22T14:16:58.988446",
+  "summary": {
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "overall": "PASS"
+  },
+  "checks": [
+    {
+      "check_id": "GOV-1",
+      "name": "Molecule-Class Propagation",
+      "status": "PASS",
+      "details": [
+        "TestCanonicalMAb: SMA nu=2.950, ka=3.8400, sigma=7.964, source=static_v5",
+        "TestCanonicalMAb PropertyMapper returned all required SMA keys",
+        "TestCanonicalMAb: titer=3.520 g/L, viability=89.6%, peak_vcd=13.9",
+        "TestCanonicalMAb UpstreamTwin produced positive titer with molecule_class=canonical_mab",
+        "TestCanonicalMAb: cIEF acidic=12.8%, main=75.6%, basic=11.6%",
+        "TestCanonicalMAb: glycan G0F=55.0%, G1F=25.0%, dominant=G0F",
+        "TestCanonicalMAb cIEF sums to 100.0% (OK)",
+        "TestCanonicalMAb glycan sums to 100.0% (OK)",
+        "TestBispecific: SMA nu=2.740, ka=3.9600, sigma=8.731, source=static_v5",
+        "TestBispecific PropertyMapper returned all required SMA keys",
+        "TestBispecific: titer=2.150 g/L, viability=89.6%, peak_vcd=12.0",
+        "TestBispecific UpstreamTwin produced positive titer with molecule_class=bispecific",
+        "TestBispecific: cIEF acidic=14.2%, main=72.9%, basic=12.9%",
+        "TestBispecific: glycan G0F=57.7%, G1F=21.2%, dominant=G0F",
+        "TestBispecific cIEF sums to 100.0% (OK)",
+        "TestBispecific glycan sums to 100.1% (OK)",
+        "TestFcFusion: SMA nu=2.740, ka=3.7200, sigma=7.103, source=static_v5",
+        "TestFcFusion PropertyMapper returned all required SMA keys",
+        "TestFcFusion: titer=2.661 g/L, viability=89.6%, peak_vcd=13.1",
+        "TestFcFusion UpstreamTwin produced positive titer with molecule_class=fc_fusion",
+        "TestFcFusion: cIEF acidic=13.3%, main=76.4%, basic=10.3%",
+        "TestFcFusion: glycan G0F=47.2%, G1F=25.5%, dominant=G0F",
+        "TestFcFusion cIEF sums to 100.0% (OK)",
+        "TestFcFusion glycan sums to 100.0% (OK)",
+        "Class scaling verified: canonical_mab titer (3.520 g/L) > bispecific (2.150 g/L) as expected"
+      ],
+      "failures": [],
+      "data": {
+        "molecule_results": {
+          "canonical_mab": {
+            "name": "TestCanonicalMAb",
+            "sma_params": {
+              "nu": 2.95,
+              "ka": 3.84,
+              "kd": 1000.0,
+              "sigma": 7.964,
+              "lambda_": 1200.0,
+              "source": "static_v5",
+              "mapping_trace": {
+                "input_pI": 8.5,
+                "input_MW_kDa": 148.0,
+                "input_GRAVY": null,
+                "input_hydrophobicity": 0.35,
+                "derived_charge_factor": 1.5,
+                "derived_Keq": 0.00384,
+                "mapping_source": "static_v5",
+                "explanation": "pI=8.50 \u2192 net charge factor \u2192 nu=2.950; hydro=0.35 \u2192 ka=3.8400; MW=148.0 \u2192 sigma=7.964; Keq=ka/kd=0.003840"
+              }
+            },
+            "upstream": {
+              "peak_vcd": 13.91,
+              "peak_vcd_day": 14.0,
+              "final_titer": 3.52,
+              "final_vcd": 13.91,
+              "viability_at_harvest": 89.6,
+              "integral_vcc": 89.0,
+              "dev_penalty_applied": 0.9138996991620263,
+              "culture_days": 14.0,
+              "temp_shift_day": 5.0,
+              "seed_density": 0.5,
+              "mu_max_observed": 0.02639,
+              "mu_at_harvest": 0.00687,
+              "qp_max_observed": 47.8,
+              "qp_at_harvest": 36.92,
+              "qg_max_observed": 0.273,
+              "lactate_peak": 2.31
+            },
+            "cief_main": 75.6
+          },
+          "bispecific": {
+            "name": "TestBispecific",
+            "sma_params": {
+              "nu": 2.74,
+              "ka": 3.96,
+              "kd": 1000.0,
+              "sigma": 8.731,
+              "lambda_": 1200.0,
+              "source": "static_v5",
+              "mapping_trace": {
+                "input_pI": 7.8,
+                "input_MW_kDa": 195.0,
+                "input_GRAVY": null,
+                "input_hydrophobicity": 0.4,
+                "derived_charge_factor": 0.8,
+                "derived_Keq": 0.00396,
+                "mapping_source": "static_v5",
+                "explanation": "pI=7.80 \u2192 net charge factor \u2192 nu=2.740; hydro=0.4 \u2192 ka=3.9600; MW=195.0 \u2192 sigma=8.731; Keq=ka/kd=0.003960"
+              }
+            },
+            "upstream": {
+              "peak_vcd": 11.97,
+              "peak_vcd_day": 14.0,
+              "final_titer": 2.15,
+              "final_vcd": 11.97,
+              "viability_at_harvest": 89.6,
+              "integral_vcc": 77.7,
+              "dev_penalty_applied": 0.9138996991620263,
+              "culture_days": 14.0,
+              "temp_shift_day": 5.0,
+              "seed_density": 0.5,
+              "mu_max_observed": 0.02505,
+              "mu_at_harvest": 0.00653,
+              "qp_max_observed": 33.46,
+              "qp_at_harvest": 25.84,
+              "qg_max_observed": 0.2728,
+              "lactate_peak": 2.29
+            },
+            "cief_main": 72.9
+          },
+          "fc_fusion": {
+            "name": "TestFcFusion",
+            "sma_params": {
+              "nu": 2.74,
+              "ka": 3.72,
+              "kd": 1000.0,
+              "sigma": 7.103,
+              "lambda_": 1200.0,
+              "source": "static_v5",
+              "mapping_trace": {
+                "input_pI": 6.2,
+                "input_MW_kDa": 105.0,
+                "input_GRAVY": null,
+                "input_hydrophobicity": 0.3,
+                "derived_charge_factor": 0.8,
+                "derived_Keq": 0.00372,
+                "mapping_source": "static_v5",
+                "explanation": "pI=6.20 \u2192 net charge factor \u2192 nu=2.740; hydro=0.3 \u2192 ka=3.7200; MW=105.0 \u2192 sigma=7.103; Keq=ka/kd=0.003720"
+              }
+            },
+            "upstream": {
+              "peak_vcd": 13.07,
+              "peak_vcd_day": 14.0,
+              "final_titer": 2.661,
+              "final_vcd": 13.07,
+              "viability_at_harvest": 89.6,
+              "integral_vcc": 84.2,
+              "dev_penalty_applied": 0.9138996991620263,
+              "culture_days": 14.0,
+              "temp_shift_day": 5.0,
+              "seed_density": 0.5,
+              "mu_max_observed": 0.02585,
+              "mu_at_harvest": 0.0065,
+              "qp_max_observed": 38.24,
+              "qp_at_harvest": 29.53,
+              "qg_max_observed": 0.2729,
+              "lactate_peak": 2.31
+            },
+            "cief_main": 76.4
+          }
+        }
+      }
+    },
+    {
+      "check_id": "GOV-2",
+      "name": "Evidence Completeness",
+      "status": "PASS",
+      "details": [
+        "PropertyMapper.nu=2.935 populated and positive",
+        "PropertyMapper.ka=1.364 populated and positive",
+        "PropertyMapper.kd=1000 populated and positive",
+        "PropertyMapper.sigma=7.964 populated and positive",
+        "PropertyMapper.lambda_=1200 populated and positive",
+        "UpstreamTwin.final_titer=3.52 \u2014 is > 0 g/L",
+        "UpstreamTwin.viability_at_harvest=89.6 \u2014 is in (0, 100]%",
+        "UpstreamTwin.peak_vcd=13.91 \u2014 is > 0",
+        "UpstreamTwin.integral_vcc=89 \u2014 is > 0",
+        "Evidence field 'nu (SMA characteristic charge)'=1.364 \u2014 populated",
+        "Evidence field 'ka (adsorption rate constant)'=1.364 \u2014 populated",
+        "Evidence field 'titer (final titer g/L)'=3.52 \u2014 populated",
+        "Evidence field 'viability (harvest viability %)'=89.6 \u2014 populated",
+        "Evidence field 'cief_main (main peak %)'=69.6 \u2014 populated",
+        "Evidence field 'g0f (G0F glycan %)'=55 \u2014 populated",
+        "All key evidence fields are populated with non-None, non-zero values"
+      ],
+      "failures": [],
+      "data": {
+        "sma_fields": {
+          "nu": 2.935,
+          "ka": 1.3643,
+          "kd": 1000.0,
+          "sigma": 7.964,
+          "lambda_": 1200.0
+        },
+        "upstream_fields": {
+          "peak_vcd": 13.91,
+          "peak_vcd_day": 14.0,
+          "final_titer": 3.52,
+          "final_vcd": 13.91,
+          "viability_at_harvest": 89.6,
+          "integral_vcc": 89.0,
+          "dev_penalty_applied": 0.9138996991620263,
+          "culture_days": 14.0,
+          "temp_shift_day": 5.0,
+          "seed_density": 0.5,
+          "mu_max_observed": 0.02639,
+          "mu_at_harvest": 0.00687,
+          "qp_max_observed": 47.8,
+          "qp_at_harvest": 36.92,
+          "qg_max_observed": 0.273,
+          "lactate_peak": 2.31
+        },
+        "evidence_fields": {
+          "nu": 2.935,
+          "ka": 1.3643,
+          "titer": 3.52,
+          "viability": 89.6,
+          "cief_main": 69.6,
+          "g0f": 55.0
+        }
+      }
+    },
+    {
+      "check_id": "GOV-3",
+      "name": "Determinism",
+      "status": "PASS",
+      "details": [
+        "All 3 PropertyMapper runs with identical inputs produced identical outputs",
+        "All 3 map_variants runs with identical inputs produced identical outputs"
+      ],
+      "failures": [],
+      "data": {
+        "runs": [
+          {
+            "nu": 2.893,
+            "ka": 1.5819,
+            "kd": 1000.0,
+            "sigma": 7.973,
+            "lambda_": 1200.0,
+            "source": "static_v5_gravy"
+          },
+          {
+            "nu": 2.893,
+            "ka": 1.5819,
+            "kd": 1000.0,
+            "sigma": 7.973,
+            "lambda_": 1200.0,
+            "source": "static_v5_gravy"
+          },
+          {
+            "nu": 2.893,
+            "ka": 1.5819,
+            "kd": 1000.0,
+            "sigma": 7.973,
+            "lambda_": 1200.0,
+            "source": "static_v5_gravy"
+          }
+        ]
+      }
+    },
+    {
+      "check_id": "GOV-5",
+      "name": "Report Internal Consistency",
+      "status": "PASS",
+      "details": [
+        "Using latest report: ProtePilot_Report_makeup(x1)_20260319_135830.json",
+        "cIEF sums to 100.0% (within 0.5% tolerance)",
+        "SEC monomer+HMW sums to 100.0% (within 0.5% tolerance)",
+        "CE-SDS intact=89.8% is in valid range (0, 100]",
+        "Glycan sums to 100.0% (within 0.5% tolerance)"
+      ],
+      "failures": [],
+      "data": {
+        "report_file": "ProtePilot_Report_makeup(x1)_20260319_135830.json",
+        "cief_sum": 100.0,
+        "sec_sum": 100.0,
+        "cesds_intact_pct": 89.8,
+        "glycan_sum": 100.0,
+        "glycan_profile": {
+          "G0F": 63.7,
+          "G1F": 19.6,
+          "G2F": 4.9,
+          "Man5": 6.9,
+          "Afuc": 2.9,
+          "Other": 2.0
+        }
+      }
+    },
+    {
+      "check_id": "GOV-7",
+      "name": "Report Cross-Section Consistency",
+      "status": "PASS",
+      "details": [
+        "Using latest report: ProtePilot_Report_makeup(x1)_20260319_135830.json",
+        "MW consistent: context=13.855 kDa, overview=13.9 kDa, appendix=13.9 kDa (max diff=0.32%)",
+        "pI consistent across sections: spread=0.0000 pH units (threshold=0.02). Values: {'context': 5.96, 'overview': 5.96, 'appendix': 5.96}",
+        "molecule_class consistent across all sections: single_domain"
+      ],
+      "failures": [],
+      "data": {
+        "report_file": "ProtePilot_Report_makeup(x1)_20260319_135830.json",
+        "values": {
+          "mw": {
+            "context": 13.855,
+            "overview": 13.9,
+            "appendix": 13.9
+          },
+          "pI": {
+            "context": 5.96,
+            "overview": 5.96,
+            "appendix": 5.96
+          },
+          "molecule_class": {
+            "context": "single_domain",
+            "overview": "single_domain"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "passed": 8,
+  "total": 8,
+  "grade": "Excellent",
+  "metrics": [
+    {
+      "name": "Isoelectric Point (pI)",
+      "predicted": "9.06",
+      "reference": "9.15 (9.0\u20139.3)",
+      "within_range": true
+    },
+    {
+      "name": "Intact Mass",
+      "predicted": "145.4 kDa",
+      "reference": "148.038 kDa",
+      "within_range": true
+    },
+    {
+      "name": "Sequence Length",
+      "predicted": "661",
+      "reference": "665",
+      "within_range": true
+    },
+    {
+      "name": "GRAVY Hydrophobicity",
+      "predicted": "-0.4711",
+      "reference": "~-0.3 (typical IgG1)",
+      "within_range": true
+    },
+    {
+      "name": "Deamidation Hotspots",
+      "predicted": "10 sites detected",
+      "reference": "3 confirmed (HC-N388, HC-N393, LC-N30)",
+      "within_range": true
+    },
+    {
+      "name": "Oxidation Hotspots (Met)",
+      "predicted": "7 Met residues",
+      "reference": "2 confirmed (HC-M255, HC-M431)",
+      "within_range": true
+    },
+    {
+      "name": "Aggregation Risk",
+      "predicted": "0.329",
+      "reference": "Low (0.4% HMW by SEC)",
+      "within_range": true
+    },
+    {
+      "name": "ADA Risk Level",
+      "predicted": "Medium",
+      "reference": "Low-Medium (humanized IgG1\u03ba)",
+      "within_range": true
+    }
+  ]
+}

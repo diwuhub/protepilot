@@ -1,0 +1,13 @@
+name,type,subtype,pI,Tm1,Tm2,cief_main,cief_acidic,g0f,g1f,g2f,sec_mono,ada_rate_pct,source
+NISTmAb,canonical_mab,IgG1k,8.44,71.0,82.0,60,25,35,35,15,98.5,0,NIST RM 8671
+Trastuzumab,canonical_mab,IgG1k,8.45,77.0,82.0,58,28,35,28,12,99.0,0.3,FDA BLA 103792
+Adalimumab,canonical_mab,IgG1k,8.25,73.0,81.0,60,22,38,26,10,99.2,12.0,FDA BLA 125057
+Bevacizumab,canonical_mab,IgG1k,8.3,70.0,80.0,55,30,40,25,8,98.5,0.8,FDA BLA 125085
+Rituximab,canonical_mab,IgG1k,8.68,69.5,78.0,62,18,42,22,7,98.8,1.0,FDA BLA 103705
+Pembrolizumab,canonical_mab,IgG4k,7.5,68.0,75.0,65,20,45,20,8,99.0,0.6,FDA BLA 125514
+Nivolumab,canonical_mab,IgG4k,7.7,67.0,74.0,63,22,43,22,9,98.5,11.0,FDA BLA 125554
+Etanercept,fc_fusion,TNFR2-Fc,5.5,62.0,70.0,50,35,30,20,10,97.0,5.0,FDA BLA 103795
+Abatacept,fc_fusion,CTLA4-Fc,5.8,60.0,68.0,48,38,32,22,8,96.5,2.0,FDA BLA 125118
+Trastuzumab_emtansine,adc,IgG1-DM1,8.2,72.0,79.0,55,30,35,28,12,97.5,4.0,FDA BLA 125427
+Emicizumab,bispecific,IgG4-bispecific,7.2,66.0,73.0,58,25,40,25,10,98.0,5.0,FDA BLA 761083
+Caplacizumab,nanobody,VHH,7.5,68.0,,,,0,0,0,99.0,9.0,FDA BLA 761112

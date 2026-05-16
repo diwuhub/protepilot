@@ -1,0 +1,242 @@
+{
+  "timestamp": "2026-03-09T09:48:35.615788",
+  "tests": {
+    "property_mapper": {
+      "status": "PASS",
+      "data": {
+        "adalimumab": {
+          "main_nu": 2.692,
+          "main_ka": 1.536,
+          "acidic_nu": 2.442,
+          "acidic_ka": 1.3056,
+          "basic_nu": 2.842,
+          "basic_ka": 1.7664,
+          "nu_in_range": true,
+          "ka_positive": true,
+          "variant_order_correct": true,
+          "ka_inverse_order": true
+        },
+        "trastuzumab": {
+          "main_nu": 2.717,
+          "main_ka": 1.488,
+          "acidic_nu": 2.467,
+          "acidic_ka": 1.2648,
+          "basic_nu": 2.867,
+          "basic_ka": 1.7112,
+          "nu_in_range": true,
+          "ka_positive": true,
+          "variant_order_correct": true,
+          "ka_inverse_order": true
+        },
+        "bevacizumab": {
+          "main_nu": 2.689,
+          "main_ka": 1.584,
+          "acidic_nu": 2.439,
+          "acidic_ka": 1.3464,
+          "basic_nu": 2.839,
+          "basic_ka": 1.8216,
+          "nu_in_range": true,
+          "ka_positive": true,
+          "variant_order_correct": true,
+          "ka_inverse_order": true
+        },
+        "rituximab": {
+          "main_nu": 2.86,
+          "main_ka": 1.5648,
+          "acidic_nu": 2.61,
+          "acidic_ka": 1.33008,
+          "basic_nu": 3.01,
+          "basic_ka": 1.79952,
+          "nu_in_range": true,
+          "ka_positive": true,
+          "variant_order_correct": true,
+          "ka_inverse_order": true
+        },
+        "NISTmAb": {
+          "main_nu": 2.716,
+          "main_ka": 1.536,
+          "acidic_nu": 2.466,
+          "acidic_ka": 1.3056,
+          "basic_nu": 2.866,
+          "basic_ka": 1.7664,
+          "nu_in_range": true,
+          "ka_positive": true,
+          "variant_order_correct": true,
+          "ka_inverse_order": true
+        }
+      }
+    },
+    "developability": {
+      "status": "FAIL",
+      "error": "unsupported operand type(s) for -: 'str' and 'str'",
+      "note": "DevelopabilityPredictor.predict() requires (embedding: np.ndarray[640], biophysical: np.ndarray[7]), not raw VH/VL sequences. The test script passed string sequences instead of numeric arrays. The rule-based fallback crashes at line 279 because biophysical[4] and biophysical[5] (acidic_residues, basic_residues) are string values instead of numeric counts."
+    },
+    "upstream_twin": {
+      "status": "PASS",
+      "data": {
+        "peak_vcd": 75.99,
+        "peak_vcd_day": 14.0,
+        "final_titer": 9.056,
+        "final_vcd": 75.99,
+        "viability_at_harvest": 99.0,
+        "integral_vcc": 282.4,
+        "dev_penalty_applied": 1.0,
+        "checks": {
+          "vcd_realistic": false
+        }
+      }
+    },
+    "analytical_qc": {
+      "status": "PASS",
+      "data": {
+        "cief": {
+          "acidic_pct": 11.9,
+          "main_pct": 77.8,
+          "basic_pct": 10.3
+        },
+        "ce_sds": {
+          "intact_pct": 96.0,
+          "fragment_pct": 0.5,
+          "hmw_pct": 3.5
+        },
+        "glycan": {
+          "g0f_pct": 55.0,
+          "g1f_pct": 25.0,
+          "g2f_pct": 8.0,
+          "afucosylated_pct": 3.0
+        },
+        "overall_qc_pass": true,
+        "summary": "Analytical QC Summary:\n  cIEF: Acidic=11.9% | Main=77.8% | Basic=10.3% [PASS]\n  CE-SDS: Intact=96.0% | Fragment=0.5% | HMW=3.5% [PASS]\n  Glycan: G0F=55.0% | G1F=25.0% | G2F=8.0% | Man5=5.0%\n  Overall QC: PASS"
+      }
+    },
+    "stability_twin": {
+      "status": "PASS",
+      "data": {
+        "arrhenius_test": {
+          "k_40C": 0.05,
+          "k_5C_predicted": 0.0010465889054286734,
+          "Ea_kJ_mol": 80.0,
+          "rate_decrease_factor": 47.77424998549975,
+          "physically_reasonable": true
+        },
+        "prediction": "StabilityResult(condition_name='5.0\u00b0C / 24 months', temperature_c=5.0, duration_months=24, timepoints=[StabilityTimepoint(month=0.0, temperature_c=5.0, sec_hmw_pct=71.0, sec_monomer_pct=28.5, sec_lmw_"
+      }
+    },
+    "nistmab_benchmark": {
+      "status": "PASS",
+      "data": {
+        "n_passed": 4,
+        "n_total": 6,
+        "pass_rate": 0.667,
+        "overall_grade": "Good",
+        "wall_time_s": 1.925,
+        "summary": "NISTmAb (RM 8671) Benchmark Validation\n  Metrics evaluated: 6\n  Passed: 4/6 (67%)\n  Overall Grade: Good\n  Runtime: 1.92s",
+        "metrics": [
+          {
+            "name": "Isoelectric Point (pI)",
+            "predicted": "N/A",
+            "literature": "9.15",
+            "within_range": false,
+            "model_source": "biopython"
+          },
+          {
+            "name": "Sequence Length",
+            "predicted": "661",
+            "literature": "665",
+            "within_range": false,
+            "model_source": "biopython"
+          },
+          {
+            "name": "Deamidation Hotspots",
+            "predicted": "10 sites detected",
+            "literature": "3 confirmed (HC-N388, HC-N393, LC-N30)",
+            "within_range": true,
+            "model_source": "regex_scan"
+          },
+          {
+            "name": "Oxidation Hotspots (Met)",
+            "predicted": "7 Met residues",
+            "literature": "2 confirmed (HC-M255, HC-M431)",
+            "within_range": true,
+            "model_source": "regex_scan"
+          },
+          {
+            "name": "Aggregation Risk",
+            "predicted": "0.300",
+            "literature": "Low (0.4% HMW by SEC)",
+            "within_range": true,
+            "model_source": "heuristic"
+          },
+          {
+            "name": "ADA Risk Level",
+            "predicted": "Medium",
+            "literature": "Low-Medium (humanized IgG1\u03ba)",
+            "within_range": true,
+            "model_source": "immunogenicity_twin"
+          }
+        ],
+        "model_sources": {
+          "Isoelectric Point (pI)": "biopython",
+          "Sequence Length": "biopython",
+          "Deamidation Hotspots": "regex_scan",
+          "Oxidation Hotspots (Met)": "regex_scan",
+          "Aggregation Risk": "heuristic",
+          "ADA Risk Level": "immunogenicity_twin"
+        }
+      }
+    },
+    "immunogenicity": {
+      "status": "PASS",
+      "data": {
+        "total_peptides_scanned": 113,
+        "n_high_risk": 5,
+        "n_medium_risk": 50,
+        "mean_mhc_score": 0.4159,
+        "max_mhc_score": 0.7938,
+        "humanization_score": 1.0,
+        "framework_identity_pct": 100.0,
+        "aggregation_penalty": 0.45,
+        "ada_risk_score": 0.669,
+        "ada_risk_level": "Medium",
+        "summary": "ADA Risk Assessment for Unknown:\n  Scanned 113 overlapping 9-mer peptides.\n  Found 5 high-risk and 50 medium-risk MHC-II binding hotspots.\n  Humanization score: 1.00 (100% framework identity).\n  Aggregation-driven immunogenicity penalty: 0.45\n  Composite ADA Risk Score: 0.669 \u2192 Medium\n  RECOMMENDATION: Monitor in Phase I; consider in-vitro T-cell assay.",
+        "top_hotspots": [
+          {
+            "position": 23,
+            "peptide": "ASGFTFDDY",
+            "score": 0.7938,
+            "in_cdr": true,
+            "risk_label": "High"
+          },
+          {
+            "position": 44,
+            "peptide": "LEWVSAITW",
+            "score": 0.7897,
+            "in_cdr": true,
+            "risk_label": "High"
+          },
+          {
+            "position": 28,
+            "peptide": "FDDYAMHWV",
+            "score": 0.7834,
+            "in_cdr": true,
+            "risk_label": "High"
+          },
+          {
+            "position": 20,
+            "peptide": "SCAASGFTF",
+            "score": 0.7559,
+            "in_cdr": true,
+            "risk_label": "High"
+          },
+          {
+            "position": 93,
+            "peptide": "YYCAKVSYL",
+            "score": 0.7244,
+            "in_cdr": true,
+            "risk_label": "High"
+          }
+        ]
+      }
+    }
+  }
+}

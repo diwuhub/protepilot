@@ -1,0 +1,170 @@
+{
+  "benchmark": "PROPHET-Ab",
+  "n_antibodies": 246,
+  "n_scored": 246,
+  "n_failed": 0,
+  "elapsed_seconds": 4.5,
+  "correlations": [
+    {
+      "prediction": "ada_risk_score",
+      "experimental": "pr_cho",
+      "description": "ada_risk_score vs pr_cho",
+      "spearman_rho": 0.13608340012575298,
+      "pearson_r": 0.12103115252441954,
+      "p_value": 0.09023177792897907,
+      "n_pairs": 197,
+      "significant": "False",
+      "direction_expected": "positive",
+      "direction_correct": true
+    },
+    {
+      "prediction": "ada_risk_score",
+      "experimental": "pr_ova",
+      "description": "ada_risk_score vs pr_ova",
+      "spearman_rho": 0.1404166779321193,
+      "pearson_r": 0.15094768002144582,
+      "p_value": 0.034233021189680676,
+      "n_pairs": 197,
+      "significant": "True",
+      "direction_expected": "positive",
+      "direction_correct": true
+    },
+    {
+      "prediction": "humanization_score",
+      "experimental": "tm1",
+      "description": "humanization_score vs tm1",
+      "spearman_rho": 0.05217329219536125,
+      "pearson_r": 0.08524507141764118,
+      "p_value": 0.19381276783333326,
+      "n_pairs": 234,
+      "significant": "False",
+      "direction_expected": "none",
+      "direction_correct": true
+    },
+    {
+      "prediction": "pI",
+      "experimental": "pr_cho",
+      "description": "pI vs pr_cho",
+      "spearman_rho": 0.2851090875266548,
+      "pearson_r": 0.25076004922322864,
+      "p_value": 0.0003792118088313889,
+      "n_pairs": 197,
+      "significant": "True",
+      "direction_expected": "positive",
+      "direction_correct": true
+    },
+    {
+      "prediction": "shelf_life_months",
+      "experimental": "tm1",
+      "description": "shelf_life_months vs tm1",
+      "spearman_rho": 0.6042066190048215,
+      "pearson_r": 0.576735188618066,
+      "p_value": 3.8118076586631446e-22,
+      "n_pairs": 234,
+      "significant": "True",
+      "direction_expected": "positive",
+      "direction_correct": true
+    },
+    {
+      "prediction": "k_5c",
+      "experimental": "sec_monomer_pct",
+      "description": "k_5c vs sec_monomer_pct",
+      "spearman_rho": -0.22992694526086263,
+      "pearson_r": -0.20620226718327112,
+      "p_value": 0.0012558429863956193,
+      "n_pairs": 242,
+      "significant": "True",
+      "direction_expected": "negative",
+      "direction_correct": true
+    },
+    {
+      "prediction": "k_40c",
+      "experimental": "tm1",
+      "description": "k_40c vs tm1",
+      "spearman_rho": -0.6242598063825644,
+      "pearson_r": -0.5131600322151051,
+      "p_value": 4.044591690671918e-17,
+      "n_pairs": 234,
+      "significant": "True",
+      "direction_expected": "negative",
+      "direction_correct": true
+    },
+    {
+      "prediction": "adj_agg_risk",
+      "experimental": "hic",
+      "description": "adj_agg_risk vs hic",
+      "spearman_rho": 0.18092758357045322,
+      "pearson_r": 0.2294451531111834,
+      "p_value": 0.00031946685480831476,
+      "n_pairs": 242,
+      "significant": "True",
+      "direction_expected": "positive",
+      "direction_correct": true
+    },
+    {
+      "prediction": "adj_agg_risk",
+      "experimental": "ac_sins_ph7_4",
+      "description": "adj_agg_risk vs ac_sins_ph7_4",
+      "spearman_rho": -0.09840011551044438,
+      "pearson_r": -0.13697935547425635,
+      "p_value": 0.033178588275464334,
+      "n_pairs": 242,
+      "significant": "True",
+      "direction_expected": "none",
+      "direction_correct": true
+    },
+    {
+      "prediction": "predicted_titer_g_l",
+      "experimental": "titer",
+      "description": "predicted_titer_g_l vs titer",
+      "spearman_rho": 0.07859079012307454,
+      "pearson_r": -0.09448566795322459,
+      "p_value": 0.14530561984773419,
+      "n_pairs": 239,
+      "significant": "False",
+      "direction_expected": "positive",
+      "direction_correct": true
+    },
+    {
+      "prediction": "pI",
+      "experimental": "ac_sins_ph7_4",
+      "description": "pI vs ac_sins_ph7_4",
+      "spearman_rho": 0.3525887173809848,
+      "pearson_r": 0.3382039542656904,
+      "p_value": 6.899940818476934e-08,
+      "n_pairs": 242,
+      "significant": "True",
+      "direction_expected": "positive",
+      "direction_correct": true
+    },
+    {
+      "prediction": "cief_main_pct",
+      "experimental": "purity",
+      "description": "cief_main_pct vs purity",
+      "spearman_rho": 0.0060337394357021,
+      "pearson_r": 0.14058773285422824,
+      "p_value": 0.028773244541337274,
+      "n_pairs": 242,
+      "significant": "True",
+      "direction_expected": "positive",
+      "direction_correct": true
+    },
+    {
+      "prediction": "cesds_intact_pct",
+      "experimental": "sec_monomer_pct",
+      "description": "cesds_intact_pct vs sec_monomer_pct",
+      "spearman_rho": 0.9986290070529706,
+      "pearson_r": 0.9804622113449992,
+      "p_value": 1.7255005306019173e-171,
+      "n_pairs": 242,
+      "significant": "True",
+      "direction_expected": "positive",
+      "direction_correct": true
+    }
+  ],
+  "summary": {
+    "n_significant": 10,
+    "n_total_pairs": 13,
+    "n_direction_correct": 13
+  }
+}

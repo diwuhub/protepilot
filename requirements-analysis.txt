@@ -1,0 +1,29 @@
+# =============================================================================
+# PharmaDev AI — Layer 2: Full Analysis Runtime
+# =============================================================================
+# Extends Layer 1 (Core) with the Streamlit UI, 3D protein visualization,
+# LLM copilot integration, and interactive dashboards.
+#
+# What this layer adds over Core:
+#   - Streamlit web application (app.py / streamlit_app.py)
+#   - 3D protein structure viewer (py3Dmol + stmol)
+#   - LLM-powered CoPilot and Advisory Board (openai)
+#   - Interactive Pareto frontier, DoE visualization, etc.
+#
+# ML predictions remain heuristic-based at this layer.  For ESM-2 embeddings,
+# XGBoost models, and model training, install requirements-training.txt.
+#
+# Install: pip install -r requirements-analysis.txt
+# =============================================================================
+
+-r requirements-core.txt
+
+# -- Streamlit UI Framework ---------------------------------------------------
+streamlit>=1.28.0
+
+# -- 3D Protein Visualization ------------------------------------------------
+py3Dmol>=2.0.0                # Interactive 3D structure viewer
+stmol>=0.0.9                  # Streamlit wrapper for py3Dmol
+
+# -- LLM / AI Agent Integration (CoPilot, Advisory Board) --------------------
+openai>=1.0.0                 # Graceful fallback to mock responses if missing

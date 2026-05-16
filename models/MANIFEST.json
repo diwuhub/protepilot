@@ -1,0 +1,25 @@
+{
+  "pipeline_version": "1.0.0",
+  "schema_version": "012225e7f3282c4a",
+  "git_hash": "unknown",
+  "timestamp": "2026-03-21T15:35:19.079288+00:00",
+  "steps_run": [
+    "train",
+    "ood",
+    "selftest"
+  ],
+  "data_checksum": "",
+  "metrics": {
+    "test_accuracy": 0.9827956989247312,
+    "test_f1_macro": 0.7349677817353155,
+    "model_type": "xgboost",
+    "ood_val_f1": 0.5393258426966292,
+    "ood_test_f1": 0.4734299516908213
+  },
+  "feature_count": 24,
+  "artifacts": {
+    "classifier_dir": "/sessions/upbeat-sweet-fermi/mnt/PharmaDev_ai/models/classifier",
+    "ood_dir": "/sessions/upbeat-sweet-fermi/mnt/PharmaDev_ai/models/ood_detector",
+    "training_csv": "/sessions/upbeat-sweet-fermi/mnt/PharmaDev_ai/data/training/classifier_data.csv"
+  }
+}

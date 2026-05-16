@@ -1,0 +1,101 @@
+{
+  "format_version": "3.0",
+  "model_type": "xgboost",
+  "feature_dim": 967,
+  "embedding_dim": 960,
+  "biophys_dim": 7,
+  "embedding_mode": "esm2",
+  "n_molecules": 370,
+  "data_source": "data/merged_xgb_training.csv",
+  "seed": 42,
+  "targets": {
+    "fab_tm": {
+      "n": 355,
+      "n_train": 284,
+      "n_val": 71,
+      "pearson_r": 0.7733,
+      "spearman_rho": 0.5367,
+      "rmse": 4.6225,
+      "gate": "PASS",
+      "model_path": "models/developability/xgb_fab_tm.pkl",
+      "feature_dim": 967,
+      "embedding_mode": "esm2"
+    },
+    "hic_rt": {
+      "n": 284,
+      "n_train": 227,
+      "n_val": 57,
+      "pearson_r": 0.2841,
+      "spearman_rho": 0.3646,
+      "rmse": 4.2833,
+      "gate": "PASS",
+      "model_path": "models/developability/xgb_hic_rt.pkl",
+      "feature_dim": 967,
+      "embedding_mode": "esm2"
+    },
+    "acsins": {
+      "n": 284,
+      "n_train": 227,
+      "n_val": 57,
+      "pearson_r": 0.3001,
+      "spearman_rho": 0.4169,
+      "rmse": 8.9853,
+      "gate": "PASS",
+      "model_path": "models/developability/xgb_acsins.pkl",
+      "feature_dim": 967,
+      "embedding_mode": "esm2"
+    },
+    "psr": {
+      "n": 137,
+      "n_train": 109,
+      "n_val": 28,
+      "pearson_r": 0.1619,
+      "spearman_rho": 0.19,
+      "rmse": 0.1696,
+      "gate": "PASS",
+      "model_path": "models/developability/xgb_psr.pkl",
+      "feature_dim": 967,
+      "embedding_mode": "esm2"
+    },
+    "stability_slope": {
+      "n": 136,
+      "n_train": 136,
+      "n_val": "5-fold CV",
+      "pearson_r": 0.2663,
+      "spearman_rho": 0.1097,
+      "rmse": 0.0545,
+      "gate": "FAIL",
+      "model_path": "models/developability/xgb_stability_slope.pkl",
+      "feature_dim": 973,
+      "embedding_mode": "esm2",
+      "fix_applied": "Outlier removal (3-sigma) + log1p transform. 6 extra biophys features. Still FAIL \u2014 fundamental data limitation: 87.6% of values compressed in [0, 0.10] range with only 136 samples.",
+      "recommendation": "Needs more training data with wider variance, or reclassify as binary (stable/unstable) target."
+    },
+    "titer": {
+      "n": 330,
+      "n_train": 264,
+      "n_val": 66,
+      "pearson_r": 0.4085,
+      "spearman_rho": 0.3984,
+      "rmse": 101.4987,
+      "gate": "PASS",
+      "model_path": "models/developability/xgb_titer.pkl",
+      "feature_dim": 967,
+      "embedding_mode": "esm2"
+    },
+    "smac_rt": {
+      "n": 137,
+      "n_train": 137,
+      "n_val": "5-fold CV",
+      "pearson_r": 0.2416,
+      "spearman_rho": 0.2485,
+      "rmse": 2.7788,
+      "gate": "PASS",
+      "model_path": "models/developability/xgb_smac_rt.pkl",
+      "feature_dim": 973,
+      "embedding_mode": "esm2",
+      "fix_applied": "Dropped PROPHET-Ab SMAC data (incompatible scale: 3.4x mismatch). Jain-137 only. Heavy regularization. 6 extra biophys features.",
+      "training_source": "jain137_only"
+    }
+  }
+}

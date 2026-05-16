@@ -1,0 +1,150 @@
+{
+  "results": {
+    "adalimumab": {
+      "pI": 8.34,
+      "gravy": -0.2868,
+      "exp_tm": 71.0,
+      "nu": 2.903,
+      "ka": 1.6903,
+      "source": "static_v5_gravy",
+      "titer": 2.273,
+      "viab": 89.6,
+      "cesds": 96.7,
+      "cief_sum": 99.99999999999999,
+      "glycan_sum": 100.0,
+      "g0f": 55.0,
+      "shelf": 36.0,
+      "cogs": 126.64,
+      "ada_risk": "Medium",
+      "ada_score": 0.676
+    },
+    "trastuzumab": {
+      "pI": 8.61,
+      "gravy": -0.3344,
+      "exp_tm": 78.5,
+      "nu": 2.984,
+      "ka": 1.5371,
+      "source": "static_v5_gravy",
+      "titer": 2.273,
+      "viab": 89.6,
+      "cesds": 96.7,
+      "cief_sum": 100.0,
+      "glycan_sum": 100.0,
+      "g0f": 55.0,
+      "shelf": 36.0,
+      "cogs": 126.64,
+      "ada_risk": "Medium",
+      "ada_score": 0.678
+    },
+    "bevacizumab": {
+      "pI": 7.06,
+      "gravy": -0.3313,
+      "exp_tm": 63.5,
+      "nu": 2.517,
+      "ka": 1.5465,
+      "source": "static_v5_gravy",
+      "titer": 2.273,
+      "viab": 89.6,
+      "cesds": 96.7,
+      "cief_sum": 100.0,
+      "glycan_sum": 100.0,
+      "g0f": 55.0,
+      "shelf": 36.0,
+      "cogs": 126.64,
+      "ada_risk": "Medium",
+      "ada_score": 0.674
+    },
+    "rituximab": {
+      "pI": 9.06,
+      "gravy": -0.3427,
+      "exp_tm": 69.0,
+      "nu": 3.118,
+      "ka": 1.5116,
+      "source": "static_v5_gravy",
+      "titer": 2.273,
+      "viab": 89.6,
+      "cesds": 96.7,
+      "cief_sum": 100.0,
+      "glycan_sum": 100.0,
+      "g0f": 55.0,
+      "shelf": 36.0,
+      "cogs": 126.64,
+      "ada_risk": "High",
+      "ada_score": 0.745
+    },
+    "nivolumab": {
+      "pI": 8.65,
+      "gravy": -0.3605,
+      "exp_tm": 66.0,
+      "nu": 2.996,
+      "ka": 1.4589,
+      "source": "static_v5_gravy",
+      "titer": 2.273,
+      "viab": 89.6,
+      "cesds": 96.7,
+      "cief_sum": 99.99999999999999,
+      "glycan_sum": 100.0,
+      "g0f": 55.0,
+      "shelf": 36.0,
+      "cogs": 126.64,
+      "ada_risk": "Medium",
+      "ada_score": 0.69
+    }
+  },
+  "findings": [],
+  "nistmab": {
+    "passed": 8,
+    "total": 8,
+    "grade": "Excellent",
+    "metrics": [
+      {
+        "name": "Isoelectric Point (pI)",
+        "pred": "9.06",
+        "ref": "9.15 (9.0\u20139.3)",
+        "pass": true
+      },
+      {
+        "name": "Intact Mass",
+        "pred": "145.4 kDa",
+        "ref": "148.038 kDa",
+        "pass": true
+      },
+      {
+        "name": "Sequence Length",
+        "pred": "661",
+        "ref": "665",
+        "pass": true
+      },
+      {
+        "name": "GRAVY Hydrophobicity",
+        "pred": "-0.4711",
+        "ref": "~-0.3 (typical IgG1)",
+        "pass": true
+      },
+      {
+        "name": "Deamidation Hotspots",
+        "pred": "10 sites detected",
+        "ref": "3 confirmed (HC-N388, HC-N393, LC-N30)",
+        "pass": true
+      },
+      {
+        "name": "Oxidation Hotspots (Met)",
+        "pred": "7 Met residues",
+        "ref": "2 confirmed (HC-M255, HC-M431)",
+        "pass": true
+      },
+      {
+        "name": "Aggregation Risk",
+        "pred": "0.329",
+        "ref": "Low (0.4% HMW by SEC)",
+        "pass": true
+      },
+      {
+        "name": "ADA Risk Level",
+        "pred": "Medium",
+        "ref": "Low-Medium (humanized IgG1\u03ba)",
+        "pass": true
+      }
+    ]
+  }
+}

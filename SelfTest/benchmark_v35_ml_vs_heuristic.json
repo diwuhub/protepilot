@@ -1,0 +1,56 @@
+{
+  "fab_tm": {
+    "n_train": 256,
+    "n_holdout": 3,
+    "ml_mae": 4.366,
+    "heuristic_mae": 5.968,
+    "winner": "ML",
+    "improvement_pct": 26.8,
+    "feature_set": "esm2"
+  },
+  "hic_rt": {
+    "n_train": 172,
+    "n_holdout": 3,
+    "ml_mae": 0.584,
+    "heuristic_mae": 0.816,
+    "winner": "ML",
+    "improvement_pct": 28.4,
+    "feature_set": "esm2"
+  },
+  "acsins": {
+    "n_train": 172,
+    "n_holdout": 3,
+    "ml_mae": 9.701,
+    "heuristic_mae": 1.7,
+    "winner": "Heuristic",
+    "improvement_pct": -470.7,
+    "feature_set": "biophys"
+  },
+  "psr": {
+    "n_train": 134,
+    "n_holdout": 3,
+    "ml_mae": 0.063,
+    "heuristic_mae": 0.157,
+    "winner": "ML",
+    "improvement_pct": 59.5,
+    "feature_set": "biophys"
+  },
+  "stability_slope": {
+    "n_train": 134,
+    "n_holdout": 3,
+    "ml_mae": 0.088,
+    "heuristic_mae": 0.076,
+    "winner": "Heuristic",
+    "improvement_pct": -15.3,
+    "feature_set": "esm2"
+  },
+  "titer": {
+    "n_train": 226,
+    "n_holdout": 3,
+    "ml_mae": 30.014,
+    "heuristic_mae": 42.473,
+    "winner": "ML",
+    "improvement_pct": 29.3,
+    "feature_set": "esm2"
+  }
+}

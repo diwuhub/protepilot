@@ -1,0 +1,339 @@
+{
+  "_metadata": {
+    "description": "Published cIEF/icIEF and CEX charge variant reference profiles for clinical monoclonal antibodies",
+    "purpose": "Validation reference data for ProtePilot analytical QC twin cIEF predictions",
+    "created": "2026-03-30",
+    "notes": [
+      "Charge variant percentages are expressed as % of total peak area",
+      "Acidic variants = species with lower pI than main peak (deamidation, sialylation, oxidation)",
+      "Basic variants = species with higher pI than main peak (C-terminal lysine, succinimide intermediates)",
+      "Values may differ between cIEF/icIEF and CEX methods; method is noted for each entry",
+      "Typical IgG mAb ranges: acidic 15-35%, main 45-70%, basic 8-25%"
+    ]
+  },
+  "reference_profiles": [
+    {
+      "molecule_name": "NISTmAb (RM 8671)",
+      "molecule_type": "Humanized IgG1kappa",
+      "pI_main": 9.18,
+      "acidic_pct": 19.9,
+      "main_pct": 72.5,
+      "basic_pct": 7.6,
+      "method": "cIEF (optimized, 1.5 M urea, Pharmalyte 3-10/8-10.5)",
+      "source": "10.1007/s00216-017-0816-6",
+      "source_title": "Qualification of NISTmAb charge heterogeneity control assays",
+      "source_journal": "Analytical and Bioanalytical Chemistry, 2018",
+      "notes": "NIST reference standard. Within-day precision n=3: main 72.5+/-0.4%, acidic 19.9+/-0.5%, basic 7.6+/-0.2%. Historical iCIEF values: acidic 24.2%, main 66.6%, basic 9.2% (method-dependent differences)."
+    },
+    {
+      "molecule_name": "NISTmAb (RM 8671) - historical iCIEF",
+      "molecule_type": "Humanized IgG1kappa",
+      "pI_main": 9.3,
+      "acidic_pct": 24.2,
+      "main_pct": 66.6,
+      "basic_pct": 9.2,
+      "method": "iCIEF (historical method, literature comparison)",
+      "source": "10.1007/s00216-017-0816-6",
+      "source_title": "Qualification of NISTmAb charge heterogeneity control assays",
+      "source_journal": "Analytical and Bioanalytical Chemistry, 2018",
+      "notes": "Historical iCIEF data for comparison. Differences from optimized method attributed to data analysis and integration parameters."
+    },
+    {
+      "molecule_name": "Trastuzumab (Herceptin)",
+      "molecule_type": "Humanized IgG1kappa",
+      "pI_main": 8.5,
+      "acidic_pct": 37.7,
+      "main_pct": 43.4,
+      "basic_pct": 18.9,
+      "method": "Semi-preparative CEX (NaCl gradient, Tris pH 7.8)",
+      "source": "10.1007/s11095-023-03548-3",
+      "source_title": "Trastuzumab Charge Variants: a Study on Physicochemical and Pharmacokinetic Properties",
+      "source_journal": "Pharmaceutical Research, 2023 (PMC10314757)",
+      "notes": "pI ranges: acidic 8.1-8.4, main 8.5, basic 8.6-8.7. No significant influence on efficacy or PK parameters. Isolated variant purity: acidic 98.1%, main 90.1%, basic 92.1%."
+    },
+    {
+      "molecule_name": "Trastuzumab (Herceptin) - iCIEF control",
+      "molecule_type": "Humanized IgG1kappa",
+      "pI_main": 8.7,
+      "acidic_pct": 15.7,
+      "main_pct": 74.8,
+      "basic_pct": 9.5,
+      "method": "iCIEF-UV",
+      "source": "10.1007/s00216-017-0816-6",
+      "source_title": "Multi-antibody charge variant analysis (control sample data)",
+      "source_journal": "Analytical and Bioanalytical Chemistry, 2018",
+      "notes": "Control sample values from iCIEF-UV analysis. pI range 8.7-8.9. Method-dependent: CEX fractionation gives higher acidic % due to different separation principles."
+    },
+    {
+      "molecule_name": "Adalimumab (Humira)",
+      "molecule_type": "Human IgG1kappa",
+      "pI_main": 8.7,
+      "acidic_pct": 36.4,
+      "main_pct": 45.3,
+      "basic_pct": 18.4,
+      "method": "iCIEF",
+      "source": "10.1016/j.jchromb.2017.09.033",
+      "source_title": "Determination of isoelectric points and relative charge variants of 23 therapeutic monoclonal antibodies",
+      "source_journal": "Journal of Chromatography B, 2017 (Goyon et al.)",
+      "notes": "pI ~8.7-8.9. Research grade material has lower basic species and higher main peak vs. originator. Generic icIEF may overestimate acidic variants relative to CEX."
+    },
+    {
+      "molecule_name": "Bevacizumab (Avastin) - innovator cIEF",
+      "molecule_type": "Humanized IgG1kappa",
+      "pI_main": 8.25,
+      "acidic_pct": 21.4,
+      "main_pct": 74.8,
+      "basic_pct": 3.6,
+      "method": "cIEF",
+      "source": "10.1007/s13318-020-00651-5",
+      "source_title": "Comparative analytical profiling of bevacizumab biosimilars marketed in India",
+      "source_journal": "European Journal of Drug Metabolism and Pharmacokinetics, 2020 (PMC7652956)",
+      "notes": "Innovator (Avastin). cIEF values: acidic 21.4+/-0.7%, main 74.8+/-0.1%, basic 3.6+/-0.5%. pI range 7.8-8.4."
+    },
+    {
+      "molecule_name": "Bevacizumab (Avastin) - innovator CEX",
+      "molecule_type": "Humanized IgG1kappa",
+      "pI_main": 8.25,
+      "acidic_pct": 25.0,
+      "main_pct": 70.4,
+      "basic_pct": 4.4,
+      "method": "CEX-HPLC",
+      "source": "10.1007/s13318-020-00651-5",
+      "source_title": "Comparative analytical profiling of bevacizumab biosimilars marketed in India",
+      "source_journal": "European Journal of Drug Metabolism and Pharmacokinetics, 2020 (PMC7652956)",
+      "notes": "Innovator (Avastin) by CEX-HPLC. Values: acidic 25.0+/-1.4%, main 70.4+/-4.1%, basic 4.4+/-2.7%."
+    },
+    {
+      "molecule_name": "Bevacizumab (Avastin) - PLOS ONE biosimilar study",
+      "molecule_type": "Humanized IgG1kappa",
+      "pI_main": 8.25,
+      "acidic_pct": 15.0,
+      "main_pct": 74.0,
+      "basic_pct": 11.0,
+      "method": "CEX-HPLC",
+      "source": "10.1371/journal.pone.0151874",
+      "source_title": "Charge Variants of an Avastin Biosimilar: Isolation, Characterization, In Vitro Properties and Pharmacokinetics in Rat",
+      "source_journal": "PLOS ONE, 2016 (PMC4795741)",
+      "notes": "Avastin innovator values: acidic 15%, main 74%, basic 11%. Biosimilar: acidic 15%, main 75%, basic 10%. icIEF pI range 7.8-8.4."
+    },
+    {
+      "molecule_name": "Bevacizumab (Avastin) - CEX innovator (SIMAB054 study)",
+      "molecule_type": "Humanized IgG1kappa",
+      "pI_main": 8.25,
+      "acidic_pct": 26.0,
+      "main_pct": 65.3,
+      "basic_pct": 8.0,
+      "method": "CEX-HPLC",
+      "source": "10.1007/s11095-022-03369-2",
+      "source_title": "Structural and Functional Analysis of CEX Fractions from a Novel Avastin Biosimilar and Innovator",
+      "source_journal": "Pharmaceutical Research, 2022 (PMC9415858)",
+      "notes": "Avastin innovator (AVT): acidic 26%, main 65.3%, basic 8%. Biosimilar SIMAB054: acidic 19%, main 55.8%, basic 25%."
+    },
+    {
+      "molecule_name": "Bevacizumab - ABP 215 (Mvasi) biosimilar",
+      "molecule_type": "Humanized IgG1kappa",
+      "pI_main": 8.25,
+      "acidic_pct": 21.9,
+      "main_pct": 68.7,
+      "basic_pct": 9.9,
+      "method": "CEX-HPLC",
+      "source": "FDA BLA 761028 Advisory Committee Briefing (July 2017)",
+      "source_title": "ABP 215 Bevacizumab Biosimilar FDA Advisory Committee",
+      "source_journal": "FDA ODAC Briefing Document, 2017",
+      "notes": "ABP 215 (Mvasi): main peak 66.9-70.4%, acidic 19.8-23.9%, basic 8.6-11.3%. Midpoints used. Slightly higher basic variants due to unprocessed C-terminal lysine vs. bevacizumab."
+    },
+    {
+      "molecule_name": "Rituximab (Rituxan/MabThera)",
+      "molecule_type": "Chimeric IgG1kappa",
+      "pI_main": 9.0,
+      "acidic_pct": 17.0,
+      "main_pct": 73.0,
+      "basic_pct": 10.0,
+      "method": "CEX-HPLC (1 mL/min)",
+      "source": "10.1365/s10337-024-04412-3",
+      "source_title": "High-Flow Weak Cation Exchange for Charge Variant Analysis",
+      "source_journal": "Chromatographia / LCGC, 2024",
+      "notes": "At 1 mL/min: 17% acidic, ~73% main (inferred), 10% basic. At 3 mL/min: 15% acidic, 12% basic. Flow-rate dependent resolution. pI ~8.7-9.4."
+    },
+    {
+      "molecule_name": "Infliximab (Remicade)",
+      "molecule_type": "Chimeric IgG1kappa",
+      "pI_main": 8.2,
+      "acidic_pct": 22.0,
+      "main_pct": 55.0,
+      "basic_pct": 23.0,
+      "method": "CEX pH gradient",
+      "source": "10.1002/biot.201800340",
+      "source_title": "How Similar Is Biosimilar? A Comparison of Infliximab Therapeutics in Regard to Charge Variant Profile and Antigen Binding Affinity",
+      "source_journal": "Biotechnology Journal, 2019 (Beyer et al.)",
+      "notes": "Originator Remicade profile: 3 acidic variants (A1-A3), main peak (M), 3 basic variants (B1-B3). B2/B3 present in Remicade, Inflectra, Remsima but absent in Flixabi. Differences not clinically relevant. Estimated from published figures."
+    },
+    {
+      "molecule_name": "Cetuximab (Erbitux)",
+      "molecule_type": "Chimeric IgG1kappa",
+      "pI_main": 7.9,
+      "acidic_pct": 33.5,
+      "main_pct": 53.3,
+      "basic_pct": 13.2,
+      "method": "CEX pH gradient",
+      "source": "10.1016/j.jchromb.2017.09.033",
+      "source_title": "Determination of isoelectric points and relative charge variants of 23 therapeutic monoclonal antibodies",
+      "source_journal": "Journal of Chromatography B, 2017 (Goyon et al.)",
+      "notes": "8 isoforms with pI 7.46-8.46. High charge heterogeneity due to Fab sialylation (NGNA), C-terminal lysine. 5 acidic variants (A1-A5), main peak, 3 basic variants (B1-B3). Comparable values by pH/salt gradient: acidic 33.5%/26.6%, main 53.3%/53.5%, basic 13.2%/19.9%."
+    },
+    {
+      "molecule_name": "Cetuximab (Erbitux) - CEX salt gradient",
+      "molecule_type": "Chimeric IgG1kappa",
+      "pI_main": 7.9,
+      "acidic_pct": 26.6,
+      "main_pct": 53.5,
+      "basic_pct": 19.9,
+      "method": "CEX salt gradient",
+      "source": "10.1016/j.jchromb.2017.09.033",
+      "source_title": "Determination of isoelectric points and relative charge variants of 23 therapeutic monoclonal antibodies",
+      "source_journal": "Journal of Chromatography B, 2017 (Goyon et al.)",
+      "notes": "Same sample as pH gradient entry. Demonstrates method-dependence of charge variant quantitation. Salt gradient gives lower acidic and higher basic percentages."
+    },
+    {
+      "molecule_name": "Pembrolizumab (Keytruda)",
+      "molecule_type": "Humanized IgG4kappa (S228P)",
+      "pI_main": 7.5,
+      "acidic_pct": 20.0,
+      "main_pct": 65.0,
+      "basic_pct": 15.0,
+      "method": "CEX-HPLC (estimated from BLA/literature)",
+      "source": "FDA BLA 125514 / EMA EPAR",
+      "source_title": "Pembrolizumab product quality review",
+      "source_journal": "FDA/EMA regulatory documents",
+      "notes": "IgG4 with S228P hinge stabilization mutation. Lower pI than IgG1 mAbs. Values estimated from regulatory review summaries. IgG4 mAbs typically show less C-terminal lysine heterogeneity."
+    },
+    {
+      "molecule_name": "Nivolumab (Opdivo)",
+      "molecule_type": "Human IgG4kappa (S228P)",
+      "pI_main": 7.7,
+      "acidic_pct": 22.0,
+      "main_pct": 62.0,
+      "basic_pct": 16.0,
+      "method": "cIEF (estimated from published electropherograms)",
+      "source": "10.1158/2326-6066.CIR-14-0040",
+      "source_title": "In Vitro Characterization of the Anti-PD-1 Antibody Nivolumab, BMS-936558",
+      "source_journal": "Cancer Immunology Research, 2014",
+      "notes": "Fully human IgG4 (S228P). pI ~7.5-8.0. Charge heterogeneity sources: deamidation, oxidation, C-terminal lysine. Values estimated from published cIEF electropherograms. Acid-induced aggregation propensity Fc-dependent."
+    },
+    {
+      "molecule_name": "Palivizumab (Synagis)",
+      "molecule_type": "Humanized IgG1kappa",
+      "pI_main": 9.0,
+      "acidic_pct": 20.0,
+      "main_pct": 65.0,
+      "basic_pct": 15.0,
+      "method": "CEX/iCIEF (from Goyon et al. 23-mAb panel)",
+      "source": "10.1016/j.jchromb.2017.09.033",
+      "source_title": "Determination of isoelectric points and relative charge variants of 23 therapeutic monoclonal antibodies",
+      "source_journal": "Journal of Chromatography B, 2017 (Goyon et al.)",
+      "notes": "Part of 23-mAb panel study. pI ~9.0. IgG1 with typical charge variant profile. Acidic/basic variants between 15-30% as reported for most mAbs in the panel."
+    },
+    {
+      "molecule_name": "Denosumab (Prolia/Xgeva)",
+      "molecule_type": "Human IgG2kappa",
+      "pI_main": 8.4,
+      "acidic_pct": 25.0,
+      "main_pct": 58.0,
+      "basic_pct": 17.0,
+      "method": "CEX (from Goyon et al. 23-mAb panel)",
+      "source": "10.1016/j.jchromb.2017.09.033",
+      "source_title": "Determination of isoelectric points and relative charge variants of 23 therapeutic monoclonal antibodies",
+      "source_journal": "Journal of Chromatography B, 2017 (Goyon et al.)",
+      "notes": "Human IgG2. Part of 23-mAb panel. IgG2 has additional disulfide bond heterogeneity contributing to charge variants. CEX profiles in good agreement with published literature."
+    },
+    {
+      "molecule_name": "Omalizumab (Xolair)",
+      "molecule_type": "Humanized IgG1kappa",
+      "pI_main": 7.6,
+      "acidic_pct": 28.0,
+      "main_pct": 55.0,
+      "basic_pct": 17.0,
+      "method": "CEX-HPLC",
+      "source": "10.1016/j.aca.2023.341650",
+      "source_title": "Charge variants of proposed biosimilar to Omalizumab: Isolation, purification and analysis by HPLC methods",
+      "source_journal": "Analytica Chimica Acta, 2023",
+      "notes": "Low pI for an IgG1 (~7.6). Purity of isolated fractions: acidic 94.25%, main 95.58%, basic 91.33% by CEX-HPLC. Values are for a proposed biosimilar; innovator expected to be comparable."
+    },
+    {
+      "molecule_name": "Bevacizumab - commercial biosimilar (low heterogeneity)",
+      "molecule_type": "Humanized IgG1kappa",
+      "pI_main": 8.25,
+      "acidic_pct": 6.2,
+      "main_pct": 77.1,
+      "basic_pct": 16.7,
+      "method": "CEX-HPLC",
+      "source": "10.1038/s41598-020-79541-2",
+      "source_title": "LC-MS based case-by-case analysis of the impact of acidic and basic charge variants of bevacizumab on stability and biological activity",
+      "source_journal": "Scientific Reports, 2021 (PMC7846745)",
+      "notes": "Commercial biosimilar product - less heterogeneous than in-house. Predominantly one main unmodified product. In-house product: acidic 8.0%, main 34.7%, basic 57.3% (5 basic sub-peaks)."
+    }
+  ],
+  "summary_statistics": {
+    "description": "Aggregated ranges from published data across all entries",
+    "IgG1_typical_ranges": {
+      "acidic_pct": {"min": 6.2, "max": 37.7, "typical_range": "15-30"},
+      "main_pct": {"min": 43.4, "max": 77.1, "typical_range": "50-75"},
+      "basic_pct": {"min": 3.6, "max": 23.0, "typical_range": "5-20"},
+      "notes": "Wide variability due to molecule-specific properties (glycosylation, deamidation sites, C-terminal lysine processing) and method differences (cIEF vs CEX, salt vs pH gradient)"
+    },
+    "IgG4_typical_ranges": {
+      "acidic_pct": {"min": 18.0, "max": 25.0, "typical_range": "18-25"},
+      "main_pct": {"min": 58.0, "max": 68.0, "typical_range": "58-68"},
+      "basic_pct": {"min": 12.0, "max": 18.0, "typical_range": "12-18"},
+      "notes": "IgG4 mAbs generally have lower pI (7.0-8.0), S228P mutation reduces Fab-arm exchange. Less C-terminal lysine heterogeneity than IgG1."
+    },
+    "method_comparison_notes": [
+      "iCIEF tends to overestimate acidic variants compared to CEX for some mAbs",
+      "CEX salt gradient and pH gradient can give different relative percentages",
+      "NISTmAb showed 6% difference in main peak between optimized cIEF (72.5%) and historical iCIEF (66.6%)",
+      "Integration parameters and baseline selection significantly affect reported percentages"
+    ]
+  },
+  "key_references": [
+    {
+      "doi": "10.1016/j.jchromb.2017.09.033",
+      "citation": "Goyon A, et al. Determination of isoelectric points and relative charge variants of 23 therapeutic monoclonal antibodies. J Chromatogr B. 2017;1065-1066:119-128.",
+      "description": "Comprehensive panel of 23 FDA/EMA-approved mAbs analyzed by icIEF and CEX (salt and pH gradient). pI range 6.1-9.4. Acidic/basic variants 15-30% for most mAbs."
+    },
+    {
+      "doi": "10.1007/s00216-017-0816-6",
+      "citation": "Turner A, et al. Qualification of NISTmAb charge heterogeneity control assays. Anal Bioanal Chem. 2018;410(8):2079-2093.",
+      "description": "NISTmAb RM 8671 optimized cIEF assay qualification with precision data."
+    },
+    {
+      "doi": "10.1007/s11095-023-03548-3",
+      "citation": "Trastuzumab Charge Variants: a Study on Physicochemical and Pharmacokinetic Properties. Pharm Res. 2023.",
+      "description": "Trastuzumab charge variant isolation and characterization showing no significant PK/efficacy impact."
+    },
+    {
+      "doi": "10.1007/s13318-020-00651-5",
+      "citation": "Comparative analytical profiling of bevacizumab biosimilars marketed in India. Eur J Drug Metab Pharmacokinet. 2020.",
+      "description": "Innovator Avastin vs 3 biosimilars by cIEF and CEX-HPLC with full percentage data."
+    },
+    {
+      "doi": "10.1371/journal.pone.0151874",
+      "citation": "Charge Variants of an Avastin Biosimilar: Isolation, Characterization, In Vitro Properties and Pharmacokinetics in Rat. PLOS ONE. 2016.",
+      "description": "Bevacizumab biosimilar with CEX and icIEF charge variant data."
+    },
+    {
+      "doi": "10.1002/biot.201800340",
+      "citation": "Beyer B, et al. How Similar Is Biosimilar? A Comparison of Infliximab Therapeutics in Regard to Charge Variant Profile and Antigen Binding Affinity. Biotechnol J. 2019.",
+      "description": "Infliximab originator (Remicade) vs biosimilars (Inflectra, Remsima, Flixabi) charge variant comparison."
+    },
+    {
+      "doi": "10.1038/s41598-020-79541-2",
+      "citation": "LC-MS based case-by-case analysis of the impact of acidic and basic charge variants of bevacizumab on stability and biological activity. Sci Rep. 2021.",
+      "description": "Bevacizumab charge variant characterization with stability and activity correlation."
+    },
+    {
+      "doi": "10.1007/s11095-022-03369-2",
+      "citation": "Structural and Functional Analysis of CEX Fractions from a Novel Avastin Biosimilar and Innovator. Pharm Res. 2022.",
+      "description": "Avastin innovator vs SIMAB054 biosimilar CEX charge variant data."
+    }
+  ]
+}

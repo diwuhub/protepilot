@@ -1,0 +1,17 @@
+{
+  "question": "Evaluate PP-101 for developability risk and explain what evidence supports the next CMC step.",
+  "candidate": {
+    "name": "PP-101",
+    "molecule_type": "canonical monoclonal antibody",
+    "molecule_class": "canonical_mab",
+    "pI": 8.4,
+    "mw": 148.6,
+    "hydrophobicity": 0.42,
+    "deam_sites": 2,
+    "ox_sites": 3,
+    "acidic_residues": 42,
+    "basic_residues": 55,
+    "pH_working": 7.0,
+    "sequence": "EVQLVESGGGLVQPGGSLRLSCAASGFTFSSYAMSWVRQAPGKGLEWVSAISGSGGSTYYADSVKGRFTISRDNSKNTLYLQMNSLRAEDTAVYYCAR"
+  }
+}

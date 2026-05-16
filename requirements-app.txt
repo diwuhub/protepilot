@@ -1,0 +1,8 @@
+# =============================================================================
+# DEPRECATED — Use requirements-analysis.txt (Layer 2) instead.
+# =============================================================================
+# For the full app with ML training, use requirements-training.txt (Layer 3).
+# This file is kept for backward compatibility only.
+# =============================================================================
+
+-r requirements-training.txt

@@ -1,0 +1,36 @@
+# =============================================================================
+# PharmaDev AI — Layer 3: Training Runtime
+# =============================================================================
+# Extends Layer 2 (Analysis) with ML training infrastructure.
+#
+# What this layer adds over Analysis:
+#   - ESM-2 protein language model embeddings (transformers + torch)
+#   - XGBoost trained developability predictors (replacing heuristics)
+#   - SHAP explainability for model interpretability
+#   - AI Training Center: unified_trainer, multitask models, datasets
+#   - Uncertainty quantification (ensemble + MC-dropout)
+#   - Model export / import (joblib serialization)
+#
+# Install: pip install -r requirements-training.txt
+#
+# NOTE: torch is ~2 GB.  For CPU-only (no GPU), install with:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+#   pip install -r requirements-training.txt
+# =============================================================================
+
+-r requirements-analysis.txt
+
+# -- Deep Learning (ESM-2 embeddings, uncertainty engine) ---------------------
+torch>=2.0.0
+
+# -- Classical ML (developability prediction, OOD detection) ------------------
+xgboost>=1.7.0
+scikit-learn>=1.3.0
+joblib>=1.3.0                 # Model serialization
+
+# -- Explainability -----------------------------------------------------------
+shap>=0.42.0                  # SHAP feature importance plots
+
+# -- Protein Language Models (ESM-2 pLM) -------------------------------------
+transformers>=4.30.0          # HuggingFace model hub
+sentencepiece>=0.1.99         # Tokenizer for ESM-2

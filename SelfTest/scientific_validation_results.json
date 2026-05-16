@@ -1,0 +1,150 @@
+{
+  "timestamp": "2026-03-17T16:06:16.725784",
+  "tests": [
+    {
+      "name": "Issue1: Bispecific Heavy_1/Heavy_2 glycan correction",
+      "passed": true,
+      "detail": "MW=164.91 kDa (raw residue ~157.5 kDa, diff=7.39 kDa \u2192 glycan added)"
+    },
+    {
+      "name": "Issue1: Canonical Heavy chain_type still works",
+      "passed": true,
+      "detail": "MW=164.91 kDa (glycan correction present)"
+    },
+    {
+      "name": "Issue2: canonical_mab assembly-wide OOD normalization",
+      "passed": true,
+      "detail": "Length used for z-score: 330, z=1.20 (should be <3.0)"
+    },
+    {
+      "name": "Issue2: bispecific_3chain OOD normalization",
+      "passed": true,
+      "detail": "Length: 333, z=1.17"
+    },
+    {
+      "name": "Issue2: Single-chain canonical_mab NOT normalized",
+      "passed": true,
+      "detail": "Length stays at raw: 440 (no normalization for <800)"
+    },
+    {
+      "name": "Issue3: classify_molecule callable",
+      "passed": true,
+      "detail": "classify_molecule returned: ClassificationResult(molecule_class=<MoleculeClass.FUSION_PROTEIN: 'fusion_protein'>, confidence='Medium', confidence_score=0.7, evidence=['Antibody variable domains detected (VH=Y, VL=N) but no Fc region \u2014 likely tandem scFv, FabFab fusion, or multi-domain antibody fragment'], warnings=[], n_chains=1, n_unique_chains=1, chain_types=['HC'], chain_lengths=[480], user_override=None)"
+    },
+    {
+      "name": "Issue5: Assembly length warning for truncated sequences",
+      "passed": true,
+      "detail": "Assembly length=180 aa, warnings=['Assembly length 180 aa is below expected minimum 800 aa for canonical_mab. Check input sequences.']"
+    },
+    {
+      "name": "NISTmAb MW",
+      "passed": true,
+      "detail": "MW=154.92 kDa (expected ~148 kDa)"
+    },
+    {
+      "name": "NISTmAb pI",
+      "passed": true,
+      "detail": "pI=8.32 (expected ~8.44)"
+    },
+    {
+      "name": "NISTmAb OOD status",
+      "passed": true,
+      "detail": "is_ood=False, max_z=1.35"
+    },
+    {
+      "name": "PropertyMapper nu",
+      "passed": true,
+      "detail": "nu=2.896 (physical range 2-22)"
+    },
+    {
+      "name": "PropertyMapper ka",
+      "passed": true,
+      "detail": "ka=3.9500"
+    },
+    {
+      "name": "PropertyMapper variant ordering",
+      "passed": true,
+      "detail": "acidic=2.00 < main=2.90 < basic=6.00"
+    },
+    {
+      "name": "Chromatography simulation ran",
+      "passed": true,
+      "detail": "Result type: SimulationResult, returncode=0"
+    },
+    {
+      "name": "Chromatography main peak RT",
+      "passed": true,
+      "detail": "RT=31.29 min (from cadet-cli simulation)"
+    },
+    {
+      "name": "Developability prediction",
+      "passed": true,
+      "detail": "Result keys: ['agg_risk', 'stability', 'viscosity_risk']"
+    },
+    {
+      "name": "Aggregation risk (numeric)",
+      "passed": true,
+      "detail": "agg_risk=0.232 (expected in [0,1])"
+    },
+    {
+      "name": "Stability score",
+      "passed": true,
+      "detail": "stability=0.300 (expected in [0,1])"
+    },
+    {
+      "name": "Dev OOD analysis",
+      "passed": true,
+      "detail": "is_ood=False, max_z=1.35"
+    },
+    {
+      "name": "Developability score",
+      "passed": true,
+      "detail": "Score=0.3/100"
+    },
+    {
+      "name": "QC cIEF sums to 100%",
+      "passed": "True",
+      "detail": "Total=100.0%"
+    },
+    {
+      "name": "QC Glycan G0F",
+      "passed": true,
+      "detail": "G0F=55.0% (expect 35-55%)"
+    },
+    {
+      "name": "QC Twin ran",
+      "passed": true,
+      "detail": "Result type: AnalyticalQCResult"
+    },
+    {
+      "name": "Upstream titer",
+      "passed": true,
+      "detail": "Titer=3.85 g/L"
+    },
+    {
+      "name": "Upstream viability",
+      "passed": true,
+      "detail": "Viability=89.6%"
+    },
+    {
+      "name": "Upstream Twin ran",
+      "passed": true,
+      "detail": "Result type: BioreactorResult"
+    },
+    {
+      "name": "Stability shelf life",
+      "passed": true,
+      "detail": "Shelf life=36 months"
+    },
+    {
+      "name": "Stability Twin ran",
+      "passed": true,
+      "detail": "Result type: DualConditionResult"
+    }
+  ],
+  "summary": {
+    "total": 28,
+    "passed": 28,
+    "failed": 0
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "source_file": "/sessions/optimistic-modest-pascal/mnt/PharmaDev_ai/data/empower_peak_results.txt",
+  "n_samples": 2,
+  "samples": [
+    {
+      "sample_name": "mAb_Lot_2024A",
+      "sample_id": "S001",
+      "injection_vol_uL": 20.0,
+      "flow_rate_mL_min": 1.0,
+      "total_area": 398819.3,
+      "pct_recovery": 98.7,
+      "peaks": [
+        {
+          "index": 1,
+          "component": "Acidic_Variant_1",
+          "rt_min": 8.423,
+          "area_mAU_s": 15234.6,
+          "height_mAU": 312.4,
+          "pct_area": 3.82,
+          "tailing_factor": 1.04,
+          "plate_count": 8521
+        },
+        {
+          "index": 2,
+          "component": "Acidic_Variant_2",
+          "rt_min": 10.871,
+          "area_mAU_s": 28456.2,
+          "height_mAU": 587.1,
+          "pct_area": 7.13,
+          "tailing_factor": 1.07,
+          "plate_count": 9134
+        },
+        {
+          "index": 3,
+          "component": "mAb_Main_Peak",
+          "rt_min": 15.342,
+          "area_mAU_s": 318742.5,
+          "height_mAU": 6423.8,
+          "pct_area": 79.89,
+          "tailing_factor": 1.02,
+          "plate_count": 12456
+        },
+        {
+          "index": 4,
+          "component": "Basic_Variant_1",
+          "rt_min": 21.654,
+          "area_mAU_s": 22187.3,
+          "height_mAU": 445.2,
+          "pct_area": 5.56,
+          "tailing_factor": 1.09,
+          "plate_count": 10823
+        },
+        {
+          "index": 5,
+          "component": "Basic_Variant_2",
+          "rt_min": 24.109,
+          "area_mAU_s": 14398.7,
+          "height_mAU": 289.6,
+          "pct_area": 3.61,
+          "tailing_factor": 1.12,
+          "plate_count": 9876
+        }
+      ]
+    },
+    {
+      "sample_name": "mAb_Lot_2024B",
+      "sample_id": "S002",
+      "injection_vol_uL": 20.0,
+      "flow_rate_mL_min": 1.0,
+      "total_area": 400635.0,
+      "pct_recovery": 99.1,
+      "peaks": [
+        {
+          "index": 1,
+          "component": "Acidic_Variant_1",
+          "rt_min": 8.401,
+          "area_mAU_s": 14987.3,
+          "height_mAU": 308.2,
+          "pct_area": 3.74,
+          "tailing_factor": 1.05,
+          "plate_count": 8612
+        },
+        {
+          "index": 2,
+          "component": "Acidic_Variant_2",
+          "rt_min": 10.834,
+          "area_mAU_s": 27834.6,
+          "height_mAU": 571.4,
+          "pct_area": 6.95,
+          "tailing_factor": 1.06,
+          "plate_count": 9201
+        },
+        {
+          "index": 3,
+          "component": "mAb_Main_Peak",
+          "rt_min": 15.318,
+          "area_mAU_s": 321456.8,
+          "height_mAU": 6489.2,
+          "pct_area": 80.24,
+          "tailing_factor": 1.01,
+          "plate_count": 12734
+        },
+        {
+          "index": 4,
+          "component": "Basic_Variant_1",
+          "rt_min": 21.623,
+          "area_mAU_s": 21543.9,
+          "height_mAU": 432.7,
+          "pct_area": 5.38,
+          "tailing_factor": 1.1,
+          "plate_count": 10654
+        },
+        {
+          "index": 5,
+          "component": "Basic_Variant_2",
+          "rt_min": 24.078,
+          "area_mAU_s": 14812.4,
+          "height_mAU": 297.3,
+          "pct_area": 3.7,
+          "tailing_factor": 1.11,
+          "plate_count": 9943
+        }
+      ]
+    }
+  ]
+}

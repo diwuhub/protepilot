@@ -1,0 +1,168 @@
+# ═══════════════════════════════════════════════════════════════
+# ProtePilot .gitignore
+# ═══════════════════════════════════════════════════════════════
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+dist/
+build/
+*.so
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+.~lock.*
+
+# Node
+node_modules/
+
+# Jupyter
+.ipynb_checkpoints/
+notebooks/*.html
+
+# Data (large files — keep structure, ignore content)
+data/external/
+data/external/raw/
+data/training/*.csv
+data/cache/
+
+# Large downloadable/regeneratable data files
+data/CoV-AbDab*.csv
+data/sabdab_summary_all.tsv
+data/main.xlsx
+data/ThPD.xlsx
+data/esm2_embeddings_cache.pt
+data/general_amps.xlsx
+data/DRAMP_general.xlsx
+data/*.npy
+data/*.numbers
+SelfTest/*.numbers
+*.numbers
+
+# Model artifacts (reproducible via training pipeline)
+models/classifier/*.npz
+models/classifier/*.json
+!models/classifier/README.md
+
+# Reports (generated output)
+Reports/
+
+# Test artifacts
+.pytest_cache/
+SelfTest/validation_results_*.json
+htmlcov/
+.coverage
+
+# Docker
+*.log
+
+# CADET source (external dependency — too large for repo)
+CADET-Core-5.1.0/
+
+# CADET engine binary (platform-specific)
+engine/cadet-cli
+
+# Platform-specific shared libraries (macOS .dylib, Linux .so)
+lib/*.dylib
+lib/*.so
+lib/*.so.*
+
+# Large model binaries (reproducible via training — keep metadata only)
+models/**/*.pkl
+models/**/*.joblib
+models/**/*.pt
+models/**/*.npz
+!models/classifier/README.md
+!models/ood_detector/README.md
+
+# HDF5 runtime pipeline outputs
+*.h5
+
+# HuggingFace cache
+data/.cache/
+
+# Temporary / scratch
+*.tmp
+*.bak
+very initial tests/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Claude artifacts (local session data)
+.claude/
+
+# Milestone test logs (contain local paths)
+SelfTest/milestone_tests/*.txt
+
+# Local-only files
+_personal_planning/
+_delete_these/
+
+# Run artifacts
+logs/results/*.json
+*.png
+update_tracker_v2.py
+
+# SelfTest reports (local only, not published)
+SelfTest/*.docx
+
+# Test artifacts (local only)
+SelfTest/artifacts/
+SelfTest/milestone_tests/*.png
+*.numbers
+
+# Root-level test screenshots
+m1_*.png
+m2_*.png
+m3_*.png
+
+# PDF planning docs (local only)
+docs/planning/*.pdf
+
+# Logs (never version-control)
+logs/
+
+# HDF5 binary data (too large for git)
+*.h5
+
+# Generated/cached data folders
+data/flab/
+data/test_molecules/
+data/bulk_templates/
+*.npz
+docs/planning/*.xlsx
+docs/planning/*.docx
+docs/planning/
+docs/analysis/
+docs/summaries/
+SelfTest/debug_reports/
+SelfTest/milestone_tests/
+skills/
+
+# Generated label and demo data stores
+labels/*.jsonl
+data/feedback/feedback.csv
+data/iex_sma_demo_results.csv
+
+# Phase 3: structure downloads + content-addressed cache
+data/structures/*.pdb
+runs/structures/
+*.pt

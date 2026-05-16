@@ -1,0 +1,11 @@
+# =============================================================================
+# DEPRECATED — Use requirements-training.txt instead.
+# =============================================================================
+# This file is kept for backward compatibility.  It redirects to the new
+# three-layer naming convention:
+#   Layer 1: requirements-core.txt
+#   Layer 2: requirements-analysis.txt
+#   Layer 3: requirements-training.txt
+# =============================================================================
+
+-r requirements-training.txt

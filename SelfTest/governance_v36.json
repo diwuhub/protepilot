@@ -1,0 +1,29 @@
+{
+  "GOV-1": {
+    "status": "PASS",
+    "paths": "18/18"
+  },
+  "GOV-2": {
+    "status": "PASS"
+  },
+  "GOV-3": {
+    "status": "PASS"
+  },
+  "GOV-5": {
+    "status": "PASS"
+  },
+  "GOV-4": {
+    "status": "WARN",
+    "drift": [
+      "bevacizumab.titer_g_l: 3.85->3.58 (7.0%)",
+      "bevacizumab.cogs_per_gram: 74.73->80.38 (7.6%)"
+    ]
+  },
+  "GOV-6": {
+    "status": "PASS"
+  },
+  "GOV-7": {
+    "status": "PASS",
+    "note": "No new reports generated since v35"
+  }
+}

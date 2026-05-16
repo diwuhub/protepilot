@@ -1,0 +1,118 @@
+{
+  "validation": {
+    "adalimumab": {
+      "pI": 8.34,
+      "nu": 3.203,
+      "ka": 1.6903,
+      "titer_g_l": 3.73,
+      "viability_pct": 89.6,
+      "peak_vcd": 13.9,
+      "cief_main": 77.1,
+      "cief_sum": 100.0,
+      "cesds_intact": 96.5,
+      "g0f": 55.8,
+      "g1f": 24.9,
+      "g2f": 7.7,
+      "glycan_sum": 100.0,
+      "ada_risk": "Medium",
+      "ada_score": 0.603,
+      "shelf_life_mo": 36,
+      "stability_grade": "Excellent",
+      "k_5c": 0.0171,
+      "cogs_per_gram": 77.15
+    },
+    "bevacizumab": {
+      "pI": 7.06,
+      "nu": 2.817,
+      "ka": 1.5465,
+      "titer_g_l": 3.58,
+      "viability_pct": 89.6,
+      "peak_vcd": 13.9,
+      "cief_main": 79.7,
+      "cief_sum": 100.0,
+      "cesds_intact": 96.5,
+      "g0f": 56.8,
+      "g1f": 24.1,
+      "g2f": 7.4,
+      "glycan_sum": 100.0,
+      "ada_risk": "Medium",
+      "ada_score": 0.63,
+      "shelf_life_mo": 36,
+      "stability_grade": "Excellent",
+      "k_5c": 0.0404,
+      "cogs_per_gram": 80.38
+    },
+    "trastuzumab": {
+      "pI": 8.61,
+      "nu": 3.284,
+      "ka": 1.5371,
+      "titer_g_l": 3.72,
+      "viability_pct": 89.6,
+      "peak_vcd": 13.9,
+      "cief_main": 76.7,
+      "cief_sum": 100.0,
+      "cesds_intact": 96.5,
+      "g0f": 54.6,
+      "g1f": 25.5,
+      "g2f": 8.1,
+      "glycan_sum": 100.0,
+      "ada_risk": "Medium",
+      "ada_score": 0.601,
+      "shelf_life_mo": 36,
+      "stability_grade": "Excellent",
+      "k_5c": 0.01,
+      "cogs_per_gram": 77.46
+    },
+    "NISTmAb": {
+      "nu": 3.232,
+      "ka": 1.5447,
+      "titer_g_l": 3.79,
+      "cief_main": 73.8,
+      "g0f": 55.0,
+      "ada_score": 0.64,
+      "shelf_life_mo": 36,
+      "cogs_per_gram": 75.93,
+      "nist_pass": 8,
+      "nist_total": 8
+    }
+  },
+  "governance": {
+    "GOV-1": {
+      "status": "PASS",
+      "paths": "18/18"
+    },
+    "GOV-2": {
+      "status": "PASS"
+    },
+    "GOV-3": {
+      "status": "PASS"
+    },
+    "GOV-5": {
+      "status": "PASS"
+    },
+    "GOV-4": {
+      "status": "WARN",
+      "drift": [
+        "bevacizumab.titer_g_l: 3.85->3.58 (7.0%)",
+        "bevacizumab.cogs_per_gram: 74.73->80.38 (7.6%)"
+      ]
+    },
+    "GOV-6": {
+      "status": "PASS"
+    },
+    "GOV-7": {
+      "status": "PASS",
+      "note": "No new reports generated since v35"
+    }
+  },
+  "nist_checks": {
+    "pI": true,
+    "MW": true,
+    "G0F_range": true,
+    "G1F_range": true,
+    "G2F_range": true,
+    "titer": true,
+    "viability": true,
+    "shelf_life": true
+  }
+}

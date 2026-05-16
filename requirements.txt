@@ -1,0 +1,22 @@
+# =============================================================================
+# PharmaDev AI — requirements.txt (Full Install — all layers)
+# =============================================================================
+# This is a convenience alias that installs EVERYTHING (Core + Analysis + Training).
+#
+# Layered install (recommended for lightweight / CI environments):
+#
+#   Layer 1 — Core only:     pip install -r requirements-core.txt
+#     Headless pipeline, bulk analysis, report generation, selftest.
+#     No UI, no ML.  All predictions are heuristic-based.
+#
+#   Layer 2 — Analysis:      pip install -r requirements-analysis.txt
+#     Core + Streamlit UI, 3D viz, LLM copilot.
+#     Still heuristic predictions (no torch/xgboost).
+#
+#   Layer 3 — Training:      pip install -r requirements-training.txt
+#     Analysis + ESM-2, XGBoost, SHAP, model training.
+#     Full ML capability.
+#
+# =============================================================================
+
+-r requirements-training.txt
